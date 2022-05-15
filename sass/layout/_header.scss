@@ -1,0 +1,125 @@
+/* index.html */
+.header {
+  border-bottom: 1px solid #ececec;
+
+  background-color: var(--white-color);
+}
+
+.logo {
+  color: var(--accent-color);
+
+  font-family: 'raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  text-decoration: none;
+}
+
+.logo--dark {
+  color: var(--primary-text-color);
+}
+
+.navigation__list {
+  display: flex;
+  margin-left: 93px;
+}
+
+.navigation__item + .navigation__item {
+  margin-left: 50px;
+}
+
+.navigation__link {
+  position: relative;
+  transition: color 250ms var(--cubic);
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--primary-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.navigation__link:hover,
+.navigation__link:focus {
+  color: var(--accent-color);
+}
+.navigation__link--current {
+  color: var(--accent-color);
+}
+
+.navigation__link--current::after {
+  position: absolute;
+  content: '';
+  min-width: 48px;
+  height: 4px;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+
+  background: #2196f3;
+  border-radius: 2px;
+}
+
+.feedback {
+  display: flex;
+  margin-left: auto;
+}
+
+.feedback__item + .feedback__item {
+  margin-left: 30px;
+}
+
+.feedback__link {
+  transition: color 250ms var(--cubic), fill 250ms var(--cubic);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.feedback__link:hover,
+.feedback__link:focus {
+  color: var(--accent-color);
+}
+
+.feedback__icons-mail,
+.feedback__icons-tel {
+  transition: color 250ms var(--cubic), fill 250ms var(--cubic);
+}
+
+.feedback__link:hover .feedback__icons-mail,
+.feedback__link:focus .feedback__icons-mail {
+  fill: var(--accent-color);
+}
+
+.feedback__link:hover .feedback__icons-tel,
+.feedback__link:focus .feedback__icons-tel {
+  fill: var(--accent-color);
+}
+
+.feedback__icons-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: var(--text-color);
+}
+.feedback__icons-tel {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--text-color);
+}

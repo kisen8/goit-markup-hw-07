@@ -22,9 +22,6 @@
 .modal-form-list {
   margin-bottom: 10px;
 }
-.modal-form-item:not(:last-child) {
-  margin-bottom: 10px;
-}
 
 .modal-form-item {
   position: relative;
@@ -32,7 +29,33 @@
 
   display: flex;
   flex-direction: column;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  & input {
+    width: 100%;
+    height: 40px;
+    padding: 11px 12px 11px 42px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    transition: border 250ms var(--cubic);
+
+    &:focus {
+      border: 1px solid var(--accent-color);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
 }
+
 .form-label {
   margin-bottom: 4px;
 
@@ -42,31 +65,6 @@
   letter-spacing: 0.01em;
   color: var(--text-color);
 }
-.modal-form-item input {
-  width: 100%;
-  height: 40px;
-  padding: 11px 12px 11px 42px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
-  transition: border 250ms var(--cubic);
-}
-.modal-form-item input:focus + .modal-form-icon {
-  fill: #2196f3;
-  transition: fill 250ms var(--cubic);
-}
-
-.modal-form-item input:focus {
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
-  cursor: pointer;
-}
 
 .modal-form-icon {
   position: absolute;
@@ -74,6 +72,11 @@
   height: 18px;
   top: 50%;
   left: 12px;
+
+  .modal-form-item input:focus + & {
+    fill: #2196f3;
+    transition: fill 250ms var(--cubic);
+  }
 }
 
 .form-field {
@@ -81,6 +84,20 @@
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
+  &::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 }
 
 .modal-form-comment {
@@ -100,26 +117,11 @@
   outline: none;
   cursor: pointer;
   transition: border-color 250ms var(--cubic);
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 
-.modal-form-comment:focus {
-  border-color: var(--accent-color);
-}
-
-.form-field::placeholder {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.01em;
-
-  color: rgba(117, 117, 117, 0.5);
-}
-.form-field.group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-}
 /* checkbox , agreements*/
 .checkbox--visually-hidden {
   position: absolute;
@@ -146,9 +148,9 @@
   letter-spacing: 0.03em;
 
   color: var(--text-color);
-}
-.agreement-label .link {
-  color: var(--accent-color);
+  & .link {
+    color: var(--accent-color);
+  }
 }
 
 .modal-check {

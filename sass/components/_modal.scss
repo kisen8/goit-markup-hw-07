@@ -11,10 +11,10 @@
   left: 50%;
   transition: transform 500ms;
   transform: translate(-50%, -50%) scale(1) rotate(0);
-}
 
-.backdrop.is-hidden .modal {
-  transform: translate(0) scale(0.3) rotate(-360deg);
+  .backdrop.is-hidden & {
+    transform: translate(0) scale(0.3) rotate(-360deg);
+  }
 }
 
 .modal-close-btn {
@@ -33,13 +33,15 @@
   justify-content: center;
   align-items: center;
 }
-.modal-close-btn:hover .modal-icons,
-.modal-close-btn:focus .modal-icons {
-  fill: var(--accent-color);
-}
+
 .modal-icons {
   width: 18px;
   height: 18px;
   fill: #000000;
   transition: fill 250ms var(--cubic);
+
+  .modal-close-btn:hover &,
+  .modal-close-btn:focus & {
+    fill: var(--accent-color);
+  }
 }

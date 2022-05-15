@@ -21,17 +21,18 @@
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+
+  & .link {
+    color: var(--address-info-footer);
+  }
+
+  & .address.link {
+    display: inline-block;
+
+    color: var(--white-color);
+  }
 }
 
 .contacts-item:not(:last-child) {
   margin-bottom: 9px;
-}
-.contacts .link {
-  color: var(--address-info-footer);
-}
-
-.contacts .address.link {
-  display: inline-block;
-
-  color: var(--white-color);
 }

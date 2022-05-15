@@ -1,7 +1,11 @@
 @import './utils/variables';
 @import './utils/hidden';
+@import './utils/placeholders';
+@import './utils/mixins';
+
 @import './base/common';
 @import './base/reset';
+
 @import './layout/header';
 @import './layout/hero';
 @import './layout/portfolio-filter';

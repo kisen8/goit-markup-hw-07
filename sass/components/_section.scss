@@ -2,6 +2,13 @@
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.section--no-padding-top {
+  padding-top: 2px;
+}
+.section--other-background {
+  background-color: var(--bgc-color);
+}
+
 .section__title {
   margin-top: 0;
   margin-bottom: 50px;

@@ -26,16 +26,16 @@
   display: flex;
   align-items: center;
 }
-.navigation__list {
+.nav {
   display: flex;
   margin-left: 93px;
 }
 
-.navigation__item + .navigation__item {
+.nav__item + .nav__item {
   margin-left: 50px;
 }
 
-.navigation__link {
+.nav__link {
   position: relative;
   transition: color 250ms var(--cubic);
 

@@ -81,6 +81,11 @@ a {
   background-color: var(--white-color);
 }
 
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   color: var(--accent-color);
   font-family: "raleway", sans-serif;
@@ -89,8 +94,13 @@ a {
   line-height: 1.19;
   text-decoration: none;
 }
-.logo--dark {
+.logo__dark {
   color: var(--primary-text-color);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
 }
 
 .navigation__list {
@@ -605,11 +615,6 @@ a {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
 }
 
 /* social-footer */

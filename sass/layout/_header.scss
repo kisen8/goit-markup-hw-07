@@ -4,6 +4,10 @@
 
   background-color: var(--white-color);
 }
+.header__container {
+  display: flex;
+  align-items: center;
+}
 
 .logo {
   color: var(--accent-color);
@@ -14,11 +18,14 @@
   line-height: 1.19;
 
   text-decoration: none;
-  &--dark {
+  &__dark {
     color: var(--primary-text-color);
   }
 }
-
+.navigation {
+  display: flex;
+  align-items: center;
+}
 .navigation__list {
   display: flex;
   margin-left: 93px;

@@ -20,8 +20,10 @@
   }
 }
 
-.soc-links__item + .soc-links__item {
-  margin-left: 10px;
+.soc-links__item {
+  & + & {
+    margin-left: 10px;
+  }
 }
 
 .soc-links__icons {

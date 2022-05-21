@@ -18,10 +18,12 @@
   line-height: 1.19;
 
   text-decoration: none;
-  &__dark {
-    color: var(--primary-text-color);
-  }
 }
+
+.logo__dark {
+  color: var(--primary-text-color);
+}
+
 .navigation {
   display: flex;
   align-items: center;
@@ -31,8 +33,10 @@
   margin-left: 93px;
 }
 
-.nav__item + .nav__item {
-  margin-left: 50px;
+.nav__item {
+  & + & {
+    margin-left: 50px;
+  }
 }
 
 .nav__link {
@@ -76,8 +80,10 @@
   margin-left: auto;
 }
 
-.feedback__item + .feedback__item {
-  margin-left: 30px;
+.feedback__item {
+  & + & {
+    margin-left: 30px;
+  }
 }
 
 .feedback__link {
